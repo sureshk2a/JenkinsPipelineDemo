@@ -1,9 +1,10 @@
-node('node') {
+pipeline {
 
-  
+    agent any
     currentBuild.result = "SUCCESS"
-
-    try {
+    
+    stages {
+      try {
        stage('Test'){
 
          env.NODE_ENV = "test"
@@ -18,8 +19,8 @@ node('node') {
 
        stage('Cleanup'){
          echo 'prune and cleanup'
-         sh 'npm prune'
-         sh 'rm node_modules -rf'
+         bat 'npm prune'
+         bat 'rm node_modules -rf'
 
          mail body: 'Jenkins - Build Successful',
               from: 'suresha@ilink-systems.com.com',
@@ -39,6 +40,6 @@ node('node') {
             to: 'sureshkumar_a@outlook.com'
 
         throw err
+      }
     }
-
 }
