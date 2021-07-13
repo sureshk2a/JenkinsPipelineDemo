@@ -1,0 +1,22 @@
+{
+  "name": "jenkinspipelinedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sureshk2a/JenkinsPipelineDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sureshk2a/JenkinsPipelineDemo/issues"
+  },
+  "homepage": "https://github.com/sureshk2a/JenkinsPipelineDemo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
