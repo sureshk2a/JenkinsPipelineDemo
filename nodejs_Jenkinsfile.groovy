@@ -13,7 +13,6 @@ pipeline {
                   def mailRecipients = 'sureshkumar_a@outlook.com'
                   def jobName = currentBuild.fullDisplayName
                   emailext body: '''${SCRIPT, template="groovy-html.template"}''',
-                  from : 'suresha@ilink-systems.com',
                   mimeType: 'text/html',
                   subject: "[Jenkins] ${jobName}",
                   to: "${mailRecipients}",
